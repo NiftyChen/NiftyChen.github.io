@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='为什么使用正则表达式  典型的搜索和替换操作要求您提供与预期的搜索结果匹配的确切文本。虽然这种技术对于对静态文本执行简单搜索和替换任务可能已经足够了，但它缺乏灵活性，若采用这种方法搜索动态文本，即使不是不可能，至少也会变得很困难。
+ 通过使用正则表达式，可以：
+ 测试字符串内的模式。 例如，可以测试输入字符串，以查看字符串内是否出现电话号码模式或信用卡号码模式。这称为数据验证。 替换文本。 可以使用正则表达式来识别文档中的特定文本，完全删除该文本或者用其他文本替换它。 基于模式匹配从字符串中提取子字符串。 可以查找文档内或输入域内特定的文本。 例如，您可能需要搜索整个网站，删除过时的材料，以及替换某些 HTML 格式标记。在这种情况下，可以使用正则表达式来确定在每个文件中是否出现该材料或该 HTML 格式标记。此过程将受影响的文件列表缩小到包含需要删除或更改的材料的那些文件。然后可以使用正则表达式来删除过时的材料。最后，可以使用正则表达式来搜索和替换标记。  语法 元字符 e.g.
+1 2 3 4 5 6 7 8 9 10  import re print(re.findall(&amp;#34;[aeiou]&amp;#34;,&amp;#34;Let me go back either&amp;#34;)) print(re.findall(&amp;#34;[^aeiou]&amp;#34;,&amp;#34;Let me go back either&amp;#34;)) rint(re.search(&amp;#34;.&amp;#34;,&amp;#34;sunck is a good man 7&amp;#34;)) print(re.findall(&amp;#34;[^0-9a-zA-Z_]&amp;#34;,&amp;#34;sunck is a good man 7&amp;#34;)) print(re.search(&amp;#34;\d&amp;#34;,&amp;#34;sunck is a good man 7&amp;#34;)) print(re.search(&amp;#34;[^\d]&amp;#34;,&amp;#34;sunck is a good man 7&amp;#34;)) print(re.findall(&amp;#34;[\W]&amp;#34;,&amp;#34;sunck is a good man 7 &amp;#34;)) print(re.'><title>Python正则表达式简介</title>
+
+<link rel='canonical' href='https://niftychen.github.io/p/first-test/'>
+
+<link rel="stylesheet" href="/scss/style.min.204b57dfd73a582a3f619613f8ba74d9ef9e02f34ae13d11a80daf33db059afb.css"><meta property='og:title' content='Python正则表达式简介'>
+<meta property='og:description' content='为什么使用正则表达式  典型的搜索和替换操作要求您提供与预期的搜索结果匹配的确切文本。虽然这种技术对于对静态文本执行简单搜索和替换任务可能已经足够了，但它缺乏灵活性，若采用这种方法搜索动态文本，即使不是不可能，至少也会变得很困难。
+ 通过使用正则表达式，可以：
+ 测试字符串内的模式。 例如，可以测试输入字符串，以查看字符串内是否出现电话号码模式或信用卡号码模式。这称为数据验证。 替换文本。 可以使用正则表达式来识别文档中的特定文本，完全删除该文本或者用其他文本替换它。 基于模式匹配从字符串中提取子字符串。 可以查找文档内或输入域内特定的文本。 例如，您可能需要搜索整个网站，删除过时的材料，以及替换某些 HTML 格式标记。在这种情况下，可以使用正则表达式来确定在每个文件中是否出现该材料或该 HTML 格式标记。此过程将受影响的文件列表缩小到包含需要删除或更改的材料的那些文件。然后可以使用正则表达式来删除过时的材料。最后，可以使用正则表达式来搜索和替换标记。  语法 元字符 e.g.
+1 2 3 4 5 6 7 8 9 10  import re print(re.findall(&amp;#34;[aeiou]&amp;#34;,&amp;#34;Let me go back either&amp;#34;)) print(re.findall(&amp;#34;[^aeiou]&amp;#34;,&amp;#34;Let me go back either&amp;#34;)) rint(re.search(&amp;#34;.&amp;#34;,&amp;#34;sunck is a good man 7&amp;#34;)) print(re.findall(&amp;#34;[^0-9a-zA-Z_]&amp;#34;,&amp;#34;sunck is a good man 7&amp;#34;)) print(re.search(&amp;#34;\d&amp;#34;,&amp;#34;sunck is a good man 7&amp;#34;)) print(re.search(&amp;#34;[^\d]&amp;#34;,&amp;#34;sunck is a good man 7&amp;#34;)) print(re.findall(&amp;#34;[\W]&amp;#34;,&amp;#34;sunck is a good man 7 &amp;#34;)) print(re.'>
+<meta property='og:url' content='https://niftychen.github.io/p/first-test/'>
+<meta property='og:site_name' content='听雨阁'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2022-03-10T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-03-10T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="Python正则表达式简介">
+<meta name="twitter:description" content="为什么使用正则表达式  典型的搜索和替换操作要求您提供与预期的搜索结果匹配的确切文本。虽然这种技术对于对静态文本执行简单搜索和替换任务可能已经足够了，但它缺乏灵活性，若采用这种方法搜索动态文本，即使不是不可能，至少也会变得很困难。
+ 通过使用正则表达式，可以：
+ 测试字符串内的模式。 例如，可以测试输入字符串，以查看字符串内是否出现电话号码模式或信用卡号码模式。这称为数据验证。 替换文本。 可以使用正则表达式来识别文档中的特定文本，完全删除该文本或者用其他文本替换它。 基于模式匹配从字符串中提取子字符串。 可以查找文档内或输入域内特定的文本。 例如，您可能需要搜索整个网站，删除过时的材料，以及替换某些 HTML 格式标记。在这种情况下，可以使用正则表达式来确定在每个文件中是否出现该材料或该 HTML 格式标记。此过程将受影响的文件列表缩小到包含需要删除或更改的材料的那些文件。然后可以使用正则表达式来删除过时的材料。最后，可以使用正则表达式来搜索和替换标记。  语法 元字符 e.g.
+1 2 3 4 5 6 7 8 9 10  import re print(re.findall(&amp;#34;[aeiou]&amp;#34;,&amp;#34;Let me go back either&amp;#34;)) print(re.findall(&amp;#34;[^aeiou]&amp;#34;,&amp;#34;Let me go back either&amp;#34;)) rint(re.search(&amp;#34;.&amp;#34;,&amp;#34;sunck is a good man 7&amp;#34;)) print(re.findall(&amp;#34;[^0-9a-zA-Z_]&amp;#34;,&amp;#34;sunck is a good man 7&amp;#34;)) print(re.search(&amp;#34;\d&amp;#34;,&amp;#34;sunck is a good man 7&amp;#34;)) print(re.search(&amp;#34;[^\d]&amp;#34;,&amp;#34;sunck is a good man 7&amp;#34;)) print(re.findall(&amp;#34;[\W]&amp;#34;,&amp;#34;sunck is a good man 7 &amp;#34;)) print(re.">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu507f42104136010c578e2032e4d1f989_35320_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍀</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">听雨阁</a></h1>
+            <h2 class="site-description">一蓑烟雨任平生</h2>
+        </div><ol class="social-menu">
+                
+                    <li>
+                        <a 
+                            href='https://github.com/CaiJimmy/hugo-theme-stack'
+                            target="_blank"
+                            title="GitHub"
+                        >
+                            
+                            
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a 
+                            href='https://twitter.com'
+                            target="_blank"
+                            title="Twitter"
+                        >
+                            
+                            
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                            
+                        </a>
+                    </li>
+                
+            </ol></header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/python/" >
+                Python
+            </a>
+        
+            <a href="/categories/%E5%87%BD%E6%95%B0/" >
+                函数
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/first-test/">Python正则表达式简介</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 10, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    3 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="为什么使用正则表达式">为什么使用正则表达式</h2>
+<p>    典型的搜索和替换操作要求您提供与预期的搜索结果匹配的确切文本。虽然这种技术对于对静态文本执行简单搜索和替换任务可能已经足够了，但它缺乏灵活性，若采用这种方法搜索动态文本，即使不是不可能，至少也会变得很困难。</p>
+<p>    通过使用正则表达式，可以：</p>
+<ul>
+<li>测试字符串内的模式。
+例如，可以测试输入字符串，以查看字符串内是否出现电话号码模式或信用卡号码模式。这称为数据验证。</li>
+<li>替换文本。
+可以使用正则表达式来识别文档中的特定文本，完全删除该文本或者用其他文本替换它。</li>
+<li>基于模式匹配从字符串中提取子字符串。
+可以查找文档内或输入域内特定的文本。
+例如，您可能需要搜索整个网站，删除过时的材料，以及替换某些 HTML 格式标记。在这种情况下，可以使用正则表达式来确定在每个文件中是否出现该材料或该 HTML 格式标记。此过程将受影响的文件列表缩小到包含需要删除或更改的材料的那些文件。然后可以使用正则表达式来删除过时的材料。最后，可以使用正则表达式来搜索和替换标记。</li>
+</ul>
+<h2 id="语法">语法</h2>
+<h3 id="元字符">元字符</h3>
+<p><img src="https://img-blog.csdnimg.cn/2020120716134742.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMTMxNjg4,size_16,color_FFFFFF,t_70"
+	
+	
+	
+	loading="lazy"
+	
+		alt="在这里插入图片描述"
+	
+	
+>
+<em>e.g.</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">re</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s2">&#34;[aeiou]&#34;</span><span class="p">,</span><span class="s2">&#34;Let me go back either&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s2">&#34;[^aeiou]&#34;</span><span class="p">,</span><span class="s2">&#34;Let me go back either&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">rint</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&#34;.&#34;</span><span class="p">,</span><span class="s2">&#34;sunck is a good man 7&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s2">&#34;[^0-9a-zA-Z_]&#34;</span><span class="p">,</span><span class="s2">&#34;sunck is a good man 7&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&#34;\d&#34;</span><span class="p">,</span><span class="s2">&#34;sunck is a good man 7&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&#34;[^\d]&#34;</span><span class="p">,</span><span class="s2">&#34;sunck is a good man 7&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s2">&#34;[\W]&#34;</span><span class="p">,</span><span class="s2">&#34;sunck is a good man 7 &#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s2">&#34;[</span><span class="se">\n</span><span class="s2">]&#34;</span><span class="p">,</span><span class="s2">&#34;sunck is a good man 7 </span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s2">&#34;.&#34;</span><span class="p">,</span><span class="s2">&#34;sunck is a good man 7 </span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span><span class="n">flags</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">S</span><span class="p">))</span>    
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>Output</em>
+<img src="https://img-blog.csdnimg.cn/2020120716184699.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMTMxNjg4,size_16,color_FFFFFF,t_70"
+	
+	
+	
+	loading="lazy"
+	
+		alt="在这里插入图片描述"
+	
+	
+></p>
+<h3 id="锚字符">锚字符</h3>
+<p><img src="https://img-blog.csdnimg.cn/20201207162441455.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMTMxNjg4,size_16,color_FFFFFF,t_70"
+	
+	
+	
+	loading="lazy"
+	
+		alt="在这里插入图片描述"
+	
+	
+>
+<em>e.g.</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">re</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&#34;^sunck&#34;</span><span class="p">,</span><span class="s2">&#34;sunck is good man&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&#34;man$&#34;</span><span class="p">,</span><span class="s2">&#34;sunck is good man&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#re.M 多行匹配</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s2">&#34;^sunck&#34;</span><span class="p">,</span><span class="s2">&#34;sunck is good man</span><span class="se">\n</span><span class="s2">sunck is good man&#34;</span><span class="p">,</span><span class="n">re</span><span class="o">.</span><span class="n">M</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&#34;\Asunck&#34;</span><span class="p">,</span><span class="s2">&#34;sunck is good man</span><span class="se">\n</span><span class="s2">sunck is good man&#34;</span><span class="p">,</span><span class="n">re</span><span class="o">.</span><span class="n">M</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s2">&#34;man$&#34;</span><span class="p">,</span><span class="s2">&#34;sunck is good man</span><span class="se">\n</span><span class="s2">sunck is good man&#34;</span><span class="p">,</span><span class="n">re</span><span class="o">.</span><span class="n">M</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&#34;man\Z&#34;</span><span class="p">,</span><span class="s2">&#34;sunck is good man</span><span class="se">\n</span><span class="s2">sunck is good man&#34;</span><span class="p">,</span><span class="n">re</span><span class="o">.</span><span class="n">M</span><span class="p">))</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>Output</em>
+<img src="https://img-blog.csdnimg.cn/20201212113747419.png#pic_center"
+	
+	
+	
+	loading="lazy"
+	
+		alt="在这里插入图片描述"
+	
+	
+></p>
+<h3 id="匹配多个字符">匹配多个字符</h3>
+<p><img src="https://img-blog.csdnimg.cn/20201212114011526.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMTMxNjg4,size_16,color_FFFFFF,t_70"
+	
+	
+	
+	loading="lazy"
+	
+		alt="在这里插入图片描述"
+	
+	
+>
+<em>e.g.</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">re</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s2">&#34;(man)&#34;</span><span class="p">,</span><span class="s2">&#34;You bully man&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s2">&#34;a?&#34;</span><span class="p">,</span><span class="s2">&#34;aaa&#34;</span><span class="p">))</span>      <span class="c1">#非贪婪匹配</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s2">&#34;a*&#34;</span><span class="p">,</span><span class="s2">&#34;aaa&#34;</span><span class="p">))</span>    <span class="c1">#贪婪匹配</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s2">&#34;.*&#34;</span><span class="p">,</span><span class="s2">&#34;aaabaa&#34;</span><span class="p">))</span>   <span class="c1">#贪婪匹配</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s2">&#34;a+&#34;</span><span class="p">,</span><span class="s2">&#34;aabaaaa&#34;</span><span class="p">))</span> <span class="c1">#贪婪匹配</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s2">&#34;a+&#34;</span><span class="p">,</span><span class="s2">&#34;aba&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s2">&#34;ab</span><span class="si">{3}</span><span class="s2">&#34;</span><span class="p">,</span><span class="s2">&#34;aabaaabaaabaaa&#34;</span><span class="p">))</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>Output</em>
+<img src="https://img-blog.csdnimg.cn/20201212143008230.png#pic_center"
+	
+	
+	
+	loading="lazy"
+	
+		alt="在这里插入图片描述"
+	
+	
+></p>
+<h3 id="特殊">特殊</h3>
+<p><img src="https://img-blog.csdnimg.cn/20201212143832759.png#pic_center"
+	
+	
+	
+	loading="lazy"
+	
+		alt="在这里插入图片描述"
+	
+	
+>
+<em>e.g.</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">re</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s2">&#34;//*.*/*/&#34;</span><span class="p">,</span>    <span class="s2">&#34;/* part1  */   /*    part  */&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"> <span class="o">//*</span>    <span class="n">后面的</span><span class="o">/</span><span class="n">是转义特殊字符</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s2">&#34;//*.*?/*/&#34;</span><span class="p">,</span>    <span class="s2">&#34;/* part1  */   /*    part  */&#34;</span><span class="p">))</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>Output</em>
+<img src="https://img-blog.csdnimg.cn/20201212143923177.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="在这里插入图片描述"
+	
+	
+></p>
+<h2 id="主要函数">主要函数</h2>
+<h3 id="rematch">re.match()</h3>
+<p>函数语法： <strong>re.match(pattern, string, flags=0)</strong></p>
+<p>函数功能：匹配成功re.match方法返回一个匹配的对象，否则返回None。</p>
+<p>函数参数说明：  </p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pattern</td>
+<td>匹配的正则表达式</td>
+</tr>
+<tr>
+<td>string</td>
+<td>要匹配的字符串。</td>
+</tr>
+<tr>
+<td>flags</td>
+<td>标志位，用于控制正则表达式的匹配方式。<a class="link" href="https://www.runoob.com/python3/python3-reg-expressions.html#flags"  target="_blank" rel="noopener"
+    >详细内容</a></td>
+</tr>
+<tr>
+<td>re.I:忽略大小写</td>
+<td></td>
+</tr>
+<tr>
+<td>re.L:做本地户识别</td>
+<td></td>
+</tr>
+<tr>
+<td>re.M:多行匹配，影响^和$</td>
+<td></td>
+</tr>
+<tr>
+<td>re.s:使**.**匹配包括换行符在内的所有字符</td>
+<td></td>
+</tr>
+<tr>
+<td>re.U:根据Unicode字符集解析字符，影响\w \w \b\B</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p><em>e.g.</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s2">&#34;www&#34;</span><span class="p">,</span><span class="s2">&#34;www.baidu.com&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">span</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s2">&#34;www&#34;</span><span class="p">,</span><span class="s2">&#34;wwwbaidu.com&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s2">&#34;www&#34;</span><span class="p">,</span><span class="s2">&#34;ww.baidu.com&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s2">&#34;www&#34;</span><span class="p">,</span><span class="s2">&#34;baidu.wwwcom&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s2">&#34;www&#34;</span><span class="p">,</span><span class="s2">&#34;wWw.wwwcom&#34;</span><span class="p">,</span><span class="n">flags</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">I</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#扫描字符串，返回从起始位置成功的匹配，如果不是从起始位置匹配成功的话，也会返回None</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>Output</em>
+<img src="https://img-blog.csdnimg.cn/20201212164131989.png#pic_center"
+	
+	
+	
+	loading="lazy"
+	
+		alt="在这里插入图片描述"
+	
+	
+></p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>匹配对象方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>group(num=0)</td>
+<td>匹配的整个表达式的字符串，group() 可以一次输入多个组号，在这种情况下它将返回一个包含那些组所对应值的元组。</td>
+</tr>
+<tr>
+<td>groups()</td>
+<td>返回一个包含所有小组字符串的元组，从 1 到 所含的小组号。</td>
+</tr>
+<tr>
+<td><em>e.g.</em></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">line</span> <span class="o">=</span> <span class="s2">&#34;Cats are smarter than dogs&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># .* 表示任意匹配除换行符（\n、\r）之外的任何单个或多个字符</span>
+</span></span><span class="line"><span class="cl"><span class="n">matchObj</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span> <span class="sa">r</span><span class="s1">&#39;(.*) are (.*?) .*&#39;</span><span class="p">,</span> <span class="n">line</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">M</span><span class="o">|</span><span class="n">re</span><span class="o">.</span><span class="n">I</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">matchObj</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">matchObj</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;matchObj.group() : &#34;</span><span class="p">,</span> <span class="n">matchObj</span><span class="o">.</span><span class="n">group</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span> <span class="p">(</span><span class="s2">&#34;matchObj.group(1) : &#34;</span><span class="p">,</span> <span class="n">matchObj</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;matchObj.group(2) : &#34;</span><span class="p">,</span> <span class="n">matchObj</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;matchObj.group : &#34;</span><span class="p">,</span> <span class="n">matchObj</span><span class="o">.</span><span class="n">groups</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;No match!!&#34;</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>Output</em>
+<img src="https://img-blog.csdnimg.cn/20201212165656534.png#pic_center"
+	
+	
+	
+	loading="lazy"
+	
+		alt="在这里插入图片描述"
+	
+	
+></p>
+<h3 id="research">re.search()</h3>
+<p>函数语法：<strong>re.search(pattern, string, flags=0)</strong>
+函数功能：扫描整个字符串并返回第一个成功的匹配。
+参数描述同上。
+<em>e.g.</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">re</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&#34;sunck&#34;</span><span class="p">,</span><span class="s2">&#34;good man is sunck!sunck is nice&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&#34;sunck&#34;</span><span class="p">,</span><span class="s2">&#34;good man is Sunck!sunck is nice&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&#34;sunck&#34;</span><span class="p">,</span><span class="s2">&#34;good man is Sunck!sunck is nice&#34;</span><span class="p">,</span><span class="n">flags</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">I</span><span class="p">))</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>Output</em>
+<img src="https://img-blog.csdnimg.cn/20201213101000609.png#pic_center"
+	
+	
+	
+	loading="lazy"
+	
+		alt="在这里插入图片描述"
+	
+	
+></p>
+<h3 id="refindall">re.findall()</h3>
+<p>函数语法：<strong>re.findall(pattern, string, flags=0)</strong>
+函数功能：在字符串中找到正则表达式所匹配的所有子串，并返回一个列表，如果没有找到匹配的，则返回空列表。
+<em>e.g.</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">re</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s2">&#34;sunck&#34;</span><span class="p">,</span><span class="s2">&#34;good man is sunck!Sunck is nice&#34;</span><span class="p">,</span><span class="n">flags</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">I</span><span class="p">))</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>Output</em>
+<img src="https://img-blog.csdnimg.cn/20201213101729362.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="在这里插入图片描述"
+	
+	
+></p>
+<h3 id="resplit">re.split()</h3>
+<p>函数语法：<strong>re.split(pattern, string[, maxsplit=0, flags=0])</strong>
+函数功能：split 方法按照能够匹配的子串将字符串分割后返回列表,对于一个找不到匹配的字符串而言，split 不会对其作出分割.
+<em>e.g.</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">strl</span> <span class="o">=</span> <span class="s2">&#34;sunck   is a good man&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sa">r</span><span class="s2">&#34; &#34;</span><span class="p">,</span><span class="n">strl</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">strl</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>        <span class="c1">#空参默认切割空格</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>Output</em>
+<img src="https://img-blog.csdnimg.cn/20201213102459207.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="在这里插入图片描述"
+	
+	
+></p>
+<h3 id="refinditer">re.finditer()</h3>
+<p>函数语法：<strong>re.finditer(pattern, string, flags=0)</strong>
+函数功能：和 findall 类似，在字符串中找到正则表达式所匹配的所有子串，并把它们作为一个迭代器返回。
+<em>e.g.</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">str3</span><span class="o">=</span><span class="s2">&#34;sunck is a good man!sunck is a nice man!sunck is a handsome man&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">d</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">finditer</span><span class="p">(</span><span class="sa">r</span><span class="s2">&#34;(sunck)&#34;</span><span class="p">,</span><span class="n">str3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">i</span><span class="o">=</span><span class="nb">next</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">group</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">    <span class="k">except</span> <span class="ne">StopIteration</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">break</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>Output</em>
+<img src="https://img-blog.csdnimg.cn/20201213103131771.png#pic_center"
+	
+	
+	
+	loading="lazy"
+	
+		alt="在这里插入图片描述"
+	
+	
+></p>
+<h3 id="resub">re.sub()</h3>
+<p>函数语法：<strong>re.sub(pattern, repl, string, count=0, flags=0)</strong>
+函数功能：用于替换字符串中的匹配项。</p>
+<ul>
+<li>repl : 替换的字符串，也可为一个函数。</li>
+<li>string : 要被查找替换的原始字符串。</li>
+<li>count : 模式匹配后替换的最大次数，默认
+0 表示替换所有的匹配。</li>
+<li>flags : 编译时用的匹配模式，数字形式。</li>
+</ul>
+<p><em>e.g.</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">phone</span> <span class="o">=</span> <span class="s2">&#34;2004-959-559 # 这是一个电话号码&#34;</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 删除注释</span>
+</span></span><span class="line"><span class="cl"><span class="n">num</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;#.*$&#39;</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="n">phone</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span> <span class="p">(</span><span class="s2">&#34;电话号码 : &#34;</span><span class="p">,</span> <span class="n">num</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 移除非数字的内容</span>
+</span></span><span class="line"><span class="cl"><span class="n">num</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\D&#39;</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="n">phone</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span> <span class="p">(</span><span class="s2">&#34;电话号码 : &#34;</span><span class="p">,</span> <span class="n">num</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>Output</em>
+<img src="https://img-blog.csdnimg.cn/20201213103704823.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="在这里插入图片描述"
+	
+	
+>
+当repl参数为函数时：
+<em>e.g.</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 将匹配的数字乘于 2</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">double</span><span class="p">(</span><span class="n">matched</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">value</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">matched</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="s1">&#39;value&#39;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;A23G4HFD567&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39;(?P&lt;value&gt;\d+)&#39;</span><span class="p">,</span> <span class="n">double</span><span class="p">,</span> <span class="n">s</span><span class="p">))</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>Output</em>   : A46G8HFD1134</p>
+<h3 id="recompile">re.compile()</h3>
+<p>函数语法：<strong>re.compile(pattern[, flags])</strong>
+函数功能：编译正则表达式，生成一个正则表达式（ Pattern ）对象，供 match() 和 search() 这两个函数使用。</p>
+<p><em>e.g.</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span><span class="kn">import</span> <span class="nn">re</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">pattern</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\d+&#39;</span><span class="p">)</span>                    <span class="c1"># 用于匹配至少一个数字</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">m</span> <span class="o">=</span> <span class="n">pattern</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s1">&#39;one12twothree34four&#39;</span><span class="p">)</span>        <span class="c1"># 查找头部，没有匹配</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span> <span class="n">m</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="kc">None</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">m</span> <span class="o">=</span> <span class="n">pattern</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s1">&#39;one12twothree34four&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="c1"># 从&#39;e&#39;的位置开始匹配，没有匹配</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span> <span class="n">m</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="kc">None</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">m</span> <span class="o">=</span> <span class="n">pattern</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s1">&#39;one12twothree34four&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="c1"># 从&#39;1&#39;的位置开始匹配，正好匹配</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span> <span class="n">m</span> <span class="p">)</span>                                        <span class="c1"># 返回一个 Match 对象</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="n">_sre</span><span class="o">.</span><span class="n">SRE_Match</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x10a42aac0</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>   <span class="c1"># 可省略 0</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;12&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">m</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>   <span class="c1"># 可省略 0</span>
+</span></span><span class="line"><span class="cl"><span class="mi">3</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">m</span><span class="o">.</span><span class="n">end</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>     <span class="c1"># 可省略 0</span>
+</span></span><span class="line"><span class="cl"><span class="mi">5</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">m</span><span class="o">.</span><span class="n">span</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>    <span class="c1"># 可省略 0</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="练习">练习</h2>
+<p><strong>Task1</strong>
+将一串字符串里面以.com或.cn为域名后缀的URL网址匹配出来，过滤掉其他的无关信息。
+<img src="https://img-blog.csdnimg.cn/20201213105557993.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="在这里插入图片描述"
+	
+	
+>
+<strong>Task2</strong>
+将一串字符串里面出现的电话号码信息提取出来，过滤掉其他无关信息。（不懂是哪里的电话格式）
+<img src="https://img-blog.csdnimg.cn/20201213110152292.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMTMxNjg4,size_16,color_FFFFFF,t_70"
+	
+	
+	
+	loading="lazy"
+	
+		alt="在这里插入图片描述"
+	
+	
+>
+<strong>Task3</strong>
+<img src="https://img-blog.csdnimg.cn/20201213111033692.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMTMxNjg4,size_16,color_FFFFFF,t_70"
+	
+	
+	
+	loading="lazy"
+	
+		alt="在这里插入图片描述"
+	
+	
+></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2022 听雨阁
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.8.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#为什么使用正则表达式">为什么使用正则表达式</a></li>
+    <li><a href="#语法">语法</a>
+      <ol>
+        <li><a href="#元字符">元字符</a></li>
+        <li><a href="#锚字符">锚字符</a></li>
+        <li><a href="#匹配多个字符">匹配多个字符</a></li>
+        <li><a href="#特殊">特殊</a></li>
+      </ol>
+    </li>
+    <li><a href="#主要函数">主要函数</a>
+      <ol>
+        <li><a href="#rematch">re.match()</a></li>
+        <li><a href="#research">re.search()</a></li>
+        <li><a href="#refindall">re.findall()</a></li>
+        <li><a href="#resplit">re.split()</a></li>
+        <li><a href="#refinditer">re.finditer()</a></li>
+        <li><a href="#resub">re.sub()</a></li>
+        <li><a href="#recompile">re.compile()</a></li>
+      </ol>
+    </li>
+    <li><a href="#练习">练习</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

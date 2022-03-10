@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on 听雨阁</title>
+    <link>https://niftychen.github.io/categories/python/</link>
+    <description>Recent content in Python on 听雨阁</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 10 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://niftychen.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python正则表达式简介</title>
+      <link>https://niftychen.github.io/p/first-test/</link>
+      <pubDate>Thu, 10 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://niftychen.github.io/p/first-test/</guid>
+      <description>为什么使用正则表达式  典型的搜索和替换操作要求您提供与预期的搜索结果匹配的确切文本。虽然这种技术对于对静态文本执行简单搜索和替换任务可能已经足够了，但它缺乏灵活性，若采用这种方法搜索动态文本，即使不是不可能，至少也会变得很困难。
+ 通过使用正则表达式，可以：
+ 测试字符串内的模式。 例如，可以测试输入字符串，以查看字符串内是否出现电话号码模式或信用卡号码模式。这称为数据验证。 替换文本。 可以使用正则表达式来识别文档中的特定文本，完全删除该文本或者用其他文本替换它。 基于模式匹配从字符串中提取子字符串。 可以查找文档内或输入域内特定的文本。 例如，您可能需要搜索整个网站，删除过时的材料，以及替换某些 HTML 格式标记。在这种情况下，可以使用正则表达式来确定在每个文件中是否出现该材料或该 HTML 格式标记。此过程将受影响的文件列表缩小到包含需要删除或更改的材料的那些文件。然后可以使用正则表达式来删除过时的材料。最后，可以使用正则表达式来搜索和替换标记。  语法 元字符 e.g.
+1 2 3 4 5 6 7 8 9 10  import re print(re.findall(&amp;#34;[aeiou]&amp;#34;,&amp;#34;Let me go back either&amp;#34;)) print(re.findall(&amp;#34;[^aeiou]&amp;#34;,&amp;#34;Let me go back either&amp;#34;)) rint(re.search(&amp;#34;.&amp;#34;,&amp;#34;sunck is a good man 7&amp;#34;)) print(re.findall(&amp;#34;[^0-9a-zA-Z_]&amp;#34;,&amp;#34;sunck is a good man 7&amp;#34;)) print(re.search(&amp;#34;\d&amp;#34;,&amp;#34;sunck is a good man 7&amp;#34;)) print(re.search(&amp;#34;[^\d]&amp;#34;,&amp;#34;sunck is a good man 7&amp;#34;)) print(re.findall(&amp;#34;[\W]&amp;#34;,&amp;#34;sunck is a good man 7 &amp;#34;)) print(re.</description>
+    </item>
+    
+  </channel>
+</rss>
